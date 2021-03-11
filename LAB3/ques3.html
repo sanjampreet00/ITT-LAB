@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+  <head >
+    <meta charset="utf-8">
+    <title >LAB 3 : Question 3</title>
+  </head >
+  <body>
+    <h2>Click on the Button below to enter number</h2>
+    <button onclick="Convert()">Enter Number</button>
+    <p id="area"></p>
+    <p id="num"></p>
+
+    <script type="text/javascript">
+      function Convert()
+      {
+        var tel = prompt("Enter the Number","(555)555-5555");
+        var arr=tel.split(")");
+        tel=arr[0].split("(");
+        var are=tel[1];
+        document.getElementById("area").innerHTML="Area Code : " + are;
+      }
+    </script>
+  </body>
+</html>

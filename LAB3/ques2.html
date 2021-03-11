@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LAB 3 : Question 2</title>
+  </head>
+
+  <body>
+    <h3>Click the button below to enter text</h3>
+    <button onclick="takeInput()">Enter Data</button>
+    <p id="q21"></p>
+    <p id="q22"></p>
+
+    <script >
+      function takeInput()
+      {
+        var sen = prompt("Enter a Phrase","Today is a Good Day");
+        var final="";
+        var i=1;
+        var c=sen[0];
+        var len=sen.length;
+        while(i<len)
+        {
+          if(sen[i]==" ")
+          {
+            c+="ay ";
+            final+=c;
+            c=sen[i+1];
+            i++;
+          }else {
+            final+=sen[i];
+          }
+          i++;
+        }
+
+        final=final+c+"ay";
+        document.getElementById("q21").innerHTML="English Phrase : " + sen;
+        document.getElementById("q22").innerHTML="Pig Latin Phrase : " + final;
+      }
+    </script>
+  </body>
+</html>
