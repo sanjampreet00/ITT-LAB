@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+      function valid(input)
+      {
+        var t=input;
+        var res = t[0];
+        var fin =  t.substring(1) + res + "ay";
+        alert(fin);
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <form>
+      <label>Enter Data : </label>
+      <input id = "te" type="text" onchange="valid(this.value)"></input>
+    </form>
+  </body>
+</html>

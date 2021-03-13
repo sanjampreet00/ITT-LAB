@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head >
+    <meta charset="utf-8" >
+    <title>LAB4 : Question1</title >
+  </head >
+  <body >
+    <h2>Click on the operation you want to perform</h2 >
+
+    <button id="b1" onclick="genFib()">Generate Fibonacci</button><br><br>
+    <button id="b1" onclick="genSqr()">Generate Squares</button>
+
+    <p id ="fib"></p>
+    <script>
+
+      function genFib()
+      {
+        var x=prompt("Enter a Number","5");
+        var n=parseInt(x);
+
+        var a=0,b=1,c,ch;
+        var str="0 1";
+
+        for(var i=2;i<n;i++)
+        {
+          c=a+b;
+          ch=c.toString();
+          str+=(" "+ch);
+          a=b;
+          b=c;
+        }
+        document.getElementById("fib").innerHTML=str;
+
+      }
+
+      function genSqr()
+      {
+        var x=prompt("Enter a Number","5");
+        var n=parseInt(x);
+
+        var str="\n";
+        for(var i=1;i<=n;i++)
+        {
+          var temp=((i.toString())+"   "+((i*i).toString()));
+          str+=temp+"\n";
+        }
+
+        alert("Squares of Number are : "+str);
+      }
+    </script>
+  </body>
+</html>
